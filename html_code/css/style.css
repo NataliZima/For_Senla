@@ -1,0 +1,11 @@
+td {
+    text-align: center;
+    vertical-align: top;
+}
+#footer {
+    margin-top: 30px
+}
+
+#footer > p {
+    text-align: center
+}
