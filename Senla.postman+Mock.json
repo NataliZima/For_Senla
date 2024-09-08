@@ -2,12 +2,12 @@
 	"info": {
 		"_postman_id": "e0db55cd-4cad-409a-b54e-f7d909e5cbd9",
 		"name": "Senla",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28309530"
 	},
 	"item": [
 		{
-			"name": "Получение списка пользователей_стр.2",
+			"name": "Получение списка пользователей",
 			"event": [
 				{
 					"listen": "test",
@@ -121,7 +121,16 @@
 						}
 					}
 				},
-				"url": "{{servers_url}}/api/users"
+				"url": {
+					"raw": "{{servers_url}}/api/users",
+					"host": [
+						"{{servers_url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
 			},
 			"response": []
 		},
@@ -157,7 +166,17 @@
 						}
 					}
 				},
-				"url": "{{servers_url}}/api/users/1"
+				"url": {
+					"raw": "{{servers_url}}/api/users/1",
+					"host": [
+						"{{servers_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
@@ -203,9 +222,58 @@
 						}
 					}
 				},
-				"url": "{{servers_url}}/api/register"
+				"url": {
+					"raw": "{{servers_url}}/api/register",
+					"host": [
+						"{{servers_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
 			},
 			"response": []
+		},
+		{
+			"name": "Mock_Senla_получение списка",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://4ca44d15-964c-4f88-95cf-7788e6fd1de6.mock.pstmn.io",
+					"protocol": "https",
+					"host": [
+						"4ca44d15-964c-4f88-95cf-7788e6fd1de6",
+						"mock",
+						"pstmn",
+						"io"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Mock_Senla_получение списка",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://4ca44d15-964c-4f88-95cf-7788e6fd1de6.mock.pstmn.io",
+							"protocol": "https",
+							"host": [
+								"4ca44d15-964c-4f88-95cf-7788e6fd1de6",
+								"mock",
+								"pstmn",
+								"io"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"page\": 3,\r\n    \"per_page\": 6,\r\n    \"total\": 13,\r\n    \"total_pages\": 3,\r\n    \"data\": [\r\n        {\r\n            \"id\": 13,\r\n            \"email\": \"meduza.gorgona@reqres.in\",\r\n            \"first_name\": \"Meduza\",\r\n            \"last_name\": \"Gorgona\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        }\r\n    ]\r\n}"
+				}
+			]
 		}
 	]
 }
